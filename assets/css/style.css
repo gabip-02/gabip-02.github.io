@@ -1,0 +1,246 @@
+.site-footer {
+  font-size: 12px;
+  font-style: italic;
+  color: #666;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.attribution {
+  font-size: 12px;
+  font-style: italic;
+  color: #303030;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.species-img {
+  width: 200px;  
+  height: auto;
+  border-radius: 12px;  /* zaokrąglenie rogów */
+}
+
+.species-row {
+  position: relative;
+}
+
+.bionano-badge {
+  position: absolute;
+  top: -0px;
+  left: -8px;
+  background: red;
+  color: white;
+  padding: 4px 8px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.page-title {
+  text-align: center;
+  color:#dbd9d9;
+  font-size: 2em;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+body {
+  background-color: #bea99a; /* kolor tła całej strony */
+  color: #333333;           
+  font-family: "Palatino Linotype", sans-serif; 
+  font-size: 16px;         
+  line-height: 1.5;         /* odstęp między wierszami */
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  width: 80%;
+  margin: 0 auto; /**automatycznie centruje poziomo tabele na stronie**/
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 2px solid#dbd9d9;
+  padding: 10px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+
+.species-page {
+  display: flex; /**zmienia sposob ukladania elementow zeby byly obok siebie a nie pod soba**/
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+
+.toc { /**klasa dla spisu tresci**/
+  width: 200px; /**stala szerokosc spisu tresci**/
+  position: sticky; /**sprawia ze bedzie 'przyklejony' do ekranu przy scrollowaniu**/
+                    /**moze byc tez position: fixed; to wtedy jest przyklejony na stale w jedno miejsce**/
+  top: 20px; /**zatrzymuje sie 20px od gory przy scrollowaniu**/
+  height: 100vh;         /* rozciąga spis treści na całą wysokość ekranu */
+  background-color: #c6b4a6;
+  /*border-right: 2px solid #ccc;*/
+  padding: 20px 10px;    /* padding wewnętrzny */
+  box-sizing: border-box; /* uwzględnia padding w szerokości i wysokości */
+}
+
+.toc ul {  /**stylizuje liste <ul> w spisie tresci**/
+  list-style: none; /**usuwa domyslne kropki**/
+  padding: 0; /**usuwa domyslny odtsep z lewej strony**/
+}
+
+.toc a { /**stylizuje linki**/
+  display: block; /**sprawia ze naciska sie caly prostokat a nie tylko tekst**/
+  padding: 8px;
+  text-decoration: none;
+  color:#333;
+}
+
+.toc a:hover {
+  background-color: #dbd9d9;
+}
+
+.toc h3 {
+  padding: 8px;
+  text-align: left;
+  color: #dbd9d9;
+}
+
+.species-header {
+  display: flex;          /* ustawia obrazek i tytuł w jednej linii */
+  align-items: flex-start; /* wyrównuje elementy do góry */
+  justify-content: space-between;
+  margin-bottom: 20px;              /* odstęp między nizsza sekcja */
+}
+
+.species-image {
+  right:0;
+  width: 250px;
+  text-align: center;
+}
+
+.species-image img {
+  width: 100%;       /* dopasuj rozmiar obrazka */
+  height: auto;
+}
+
+.species-title h1 {
+  margin: 0;              /* usuwa domyślny margines nagłówka */
+}
+
+.content {
+  flex: 1;  /**dziala dlatego ze :
+               .species-page {
+                              display: flex;
+                            }
+                flex: 1 sprawia ze content zajmuje cala dostepna przestrzen jaka zostala
+                bo 200px juz bylo zajetych przez spis tresci              **/
+  margin-right: 30px; /**zeby zostalo miejsce na ikony**/
+  padding: 20px;  /**daje odstep wewnatrz elementu**/
+}
+
+
+/*.species-image {
+  float: right;
+  width: 250px;
+  text-align: center;
+}
+
+.species-image img {
+  width: 100%;
+}
+*/
+
+h2 {
+  text-align: center;
+  position: relative;
+}
+
+h2::before,
+h2::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background: black;
+}
+
+h2::before {
+  left: 0;
+}
+
+h2::after {
+  right: 0;
+}
+
+/* TABELA */
+.resources-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.resources-table tr:nth-child(even) {
+  background-color: #dbd9d9;
+}
+
+.resources-table tr:nth-child(odd) {
+  background-color: transparent;
+}
+
+.resources-table th, td {
+  border: 2px solid #dbd9d9;
+}
+
+.resource-link::before {
+  content: "\f0c1";    /* Font Awesome unicode dla linka/łańcucha */
+  font-family: "Font Awesome 6 Free"; 
+  font-weight: 900;    /* wymagane dla FA Solid */
+  font-size: 20px;
+  color: #666;
+}
+
+.resource-link {
+  color: #666;
+}
+
+.social-icons {
+  width: 30px;
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-right: 7px;
+}
+
+.social-icons a {
+  color: #333;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #0d6bd5; /* zmiana koloru po najechaniu */
+}
+
+.back-button {
+  display: inline-block;
+  padding: 4px 8px;
+  background-color: #333;
+  color: #dbd9d9;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-left: 5px;
+  margin-bottom: 20px; /* odstęp od tytułu lub headera */
+  transition: background 0.2s;
+}
+
+.back-button:hover {
+  background-color: #88b4e1;
+}
